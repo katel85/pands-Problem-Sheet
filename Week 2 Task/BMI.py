@@ -1,5 +1,11 @@
 # BMI labwork 2.2 week 2 
 # Author  Catherine Leddy
+# Ref https://www.w3resource.com/python-exercises/python-basic-exercise-66.php
+# Ref https://stackoverflow.com/questions/20405610/bmi-calculator-in-python/20405792
+# Ref https://www.includehelp.com/python/bmi-body-mass-index-calculator.aspx
+
+
+
 
 name = input ('hey what is your name')
 print ( 'Hello' + name )
