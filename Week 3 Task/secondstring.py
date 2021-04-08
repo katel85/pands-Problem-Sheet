@@ -1,10 +1,6 @@
 # Write a program that takes asks a user to input a string and outputs every second letter in reverse order.
 # Author Catherine Leddy
 
-
-
-
-
 sent = str(input("Please enter a sentence and I will output ever second letter for you in reverse order!"))
 sent2 = (sent[::-1])
 print (sent2[::2])
