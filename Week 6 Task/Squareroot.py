@@ -3,6 +3,7 @@
 
 # Ref: https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/#:~:text=Let%20N%20be%20any%20number,correct%20square%20root%20of%20N.
 # Ref: https://stackoverflow.com/questions/55232484/newtons-method-for-approximating-square-roots
+# Ref https://www.w3schools.com/python/python_functions.asp 
     # Newtons definition for a square root 
     # Let N be any number then the square root of N can be given by the formula:
     # root = 0.5 * (X + (N / X)) where X is any guess which can be assumed to be N or 1.
@@ -25,7 +26,10 @@ def main():
        x = float(x)
        x1 =round(newton(x),1)
        print ("The program's estimate of the square root of {} is {}".format(x,x1))
+       
 main()
+
+
 
 
 
