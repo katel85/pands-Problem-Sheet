@@ -3,7 +3,7 @@
 # divide it by two, but if it is odd, multiply it by three and add one.Have the program end if the current value is one.
 # Author Catherine Leddy
 
-number=int(input('Enter a positive integer number:\n'))
+number=int(input('Enter a positive integer number:'))
 
 def collatz (number): # number is the parameter
     while number !=1:# this loop will ensure code will run until number reaches 1

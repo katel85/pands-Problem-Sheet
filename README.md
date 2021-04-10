@@ -70,14 +70,70 @@ print ('Hope you like your new sentence!')
 
 Explanation:
 
-- First task was to  create a string asking the user to input a sentence. This was defined as sent.
-- The sent was then coded to  read backwards with sent2 = (sent[::-1])
-- Second task was to pick every second letter in the reversed sentence with print (sent2[::2])
+- First task was to  create a string asking the user to input a sentence. This was defined as sent. This input will be variable used for the test code to run on.
+- The sent (user input) was then coded to  read backwards with sent2 = (sent[::-1]). This code uses string slicing to reverse print the input sentence. We use indexing here with [::-1] index position 0 would denote the end of the string sentence. Therefore -1 (negative indexing)is used so the first letter is included in the code. The slice statement [::-1] means start at the end of the string and end at position 0.
+- Second task was to pick every second letter in the reversed sentence with print (sent2[::2]). Here again the index :2 is used to start the code at the second letter. 
 
 References:
 
 <https://stackoverflow.com/questions/20847205/program-to-extract-every-alternate-letters-from-a-string-in-python>
 
 <https://www.w3schools.com/python/python_howto_reverse_string.asp>
+
+<https://www.educative.io/edpresso/how-do-you-reverse-a-string-in-python>
+
+Automatetheboringstuff.com. 2020. Automate The Boring Stuff With Python. [online] Available at: <https://automatetheboringstuff.com/chapter6/>
+
+
+
+# Week 04 Task 
+
+
+_Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation.At each step calculate the next value by taking the current value and, if it is even,divide it by two, but if it is odd, multiply it by three and add one.Have the program end if the current value is one_
+
+_Author Catherine Leddy_
+
+Code for Task:
+
+number=int(input('Enter a positive integer number:\n'))
+
+def collatz (number):
+
+    while number !=1:
+        if number % 2 == 0:
+            number= number//2
+            print(number)
+        else:
+           number=  3 * number + 1
+           print(number)    
+
+collatz(number)
+
+Explanation:
+
+- In the first line of code the number is defined as an int and string is used when asking the user to input a positive integer number.
+- Collatz is then defined as a function. The number is now passed into the function. The code must be indented after the def or we will encounter indentation errors. 
+- The next  few lines of code will now define what the function of collatz is. The first line of code is the  **while loop** . The while loop will execute a set of statements as long as a condition is true . This states that  the code should execute while the number is not equal to 1 . When the number reaches 1 the code will stop running. This is a indefinate iteration as long as the number is not 1.
+- The **if** statement will run as long as the statement is true. Statement here is if the number is even (%2==0). Then the number  will be divided by 2 and will be floored (//2). We use the floor function so the number won't have a decimal point when the code runs.
+- If this **if** statement is not true the **else** statement will run and take the number and multiple by 3 and add 1.
+- The last step collatz(number) function is  called  and the code will run with the data entered from the initial input of the user.
+  
+References:
+
+<https://stackoverflow.com/questions/33508034/making-a-collatz-program-automate-the-boring-stuff>
+
+<https://www.youtube.com/watch?v=lAp_5qTdOhM>
+
+<https://m-nayoumi.medium.com/generating-a-collatz-sequence-using-a-python-program-56c8fbc318c9>
+
+<https://www.educative.io/edpresso/how-to-generate-the-collatz-sequence-in-python>
+
+Python Functions Examples: Call, Indentation, Arguments & Return Values <https://www.guru99.com/functions-in-python.html#1>
+
+<https://www.w3schools.com/python/python_while_loops.asp>
+
+
+
+
 
 
