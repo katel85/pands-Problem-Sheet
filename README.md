@@ -2,25 +2,34 @@ pip Install markdown
 pip Install Pygments
 
 
-# pands-Problem-Sheet
+# Pands-Problem-Sheet-G00048625
 
 
-Week 2 lab- Write a program that calculates somebody's Body Mass Index (BMI)
+Week 2 Lab Task- Write a program that calculates somebody's Body Mass Index (BMI)
 The inputs are the person's height in centimetres and weight in kilograms.
 The output  is their weight divided by their height in metres squared.
 
-BMI labwork week 2 
+BMI labwork Week 2  
 
 Author  Catherine Leddy
 
+Code for Task:
 
 name = input ('Hey what is your name')
+
 print ( 'Hello' + name )
+
 height = float(input('Hey{} what is your height in cm :' .format (name)))
+
 weight = float(input('Hey{} name what is your weight in kg :' .format(name)))
+
 Newheight = ((height/100)**2)
+
 BMI= float( weight / Newheight)
+
 print("Your BMI is {}".format (BMI))
+
+Explanation:
 
 
 1. First step was to research and look at sample code in the below references.
@@ -33,6 +42,9 @@ print("Your BMI is {}".format (BMI))
 
 
 References: 
+
 https://www.w3resource.com/python-exercises/python-basic-exercise-66.php
+
 https://stackoverflow.com/questions/20405610/bmi-calculator-in-python/20405792
+
 https://www.includehelp.com/python/bmi-body-mass-index-calculator.aspx
