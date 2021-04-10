@@ -5,7 +5,9 @@ pip Install Pygments
 # Pands-Problem-Sheet-G00048625
 
 
-_Week 2 Lab Task- Write a program that calculates somebody's Body Mass Index (BMI)
+# Week 2 Task
+
+_Write a program that calculates somebody's Body Mass Index (BMI)
 The inputs are the person's height in centimetres and weight in kilograms.
 The output  is their weight divided by their height in metres squared._
 
@@ -48,5 +50,34 @@ References:
 <https://www.includehelp.com/python/bmi-body-mass-index-calculator.aspx>
 
 <https://www.youtube.com/watch?v=pTCROLZLhDM> Markdown Video
+
+
+# Week 3 Task
+
+_Write a program that takes asks a user to input a string and outputs every second letter in reverse order_
+
+_Author Catherine Leddy_
+
+Code for Task:
+
+sent = str(input("Please enter a sentence and I will output ever second letter for you in reverse order!"))
+
+sent2 = (sent[::-1])
+
+print (sent2[::2])
+
+print ('Hope you like your new sentence!')
+
+Explanation:
+
+- First task was to  create a string asking the user to input a sentence. This was defined as sent.
+- The sent was then coded to  read backwards with sent2 = (sent[::-1])
+- Second task was to pick every second letter in the reversed sentence with print (sent2[::2])
+
+References:
+
+<https://stackoverflow.com/questions/20847205/program-to-extract-every-alternate-letters-from-a-string-in-python>
+
+<https://www.w3schools.com/python/python_howto_reverse_string.asp>
 
 
