@@ -7,16 +7,18 @@
 
 import datetime
 
-weekno= datetime.datetime.today().weekday()
+day= datetime.datetime.today().weekday()
+
+
+if day<5 :
+    print("Yes, unfortunately today is a weekday.")
+else:
+    print("It is the weekend, yay!")  
 
 #x=datetime.datetime.now()
 #print(x)-this will tell the date but not the day name. Need to change the code 
 #so that program knows weekdays.The python weekday function of class date returns the day
 #of the week as an integer. It starts from 0 for a Monday and ends at 6 for a Sunday
-if weekno<5 :
-    print("Yes, unfortunately today is a weekday.")
-else:
-    print("It is the weekend, yay!")  
 
 
 
