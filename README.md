@@ -135,5 +135,56 @@ Python Functions Examples: Call, Indentation, Arguments & Return Values <https:/
 
 
 
+# Week 05 Task
+
+_Write a program that outputs whether or not today is a weekday_
+
+_Author: Catherine Leddy_
+
+Code for Task:
+
+import datetime
+
+day= datetime.datetime.today().weekday()
+
+
+if day<5 :
+
+print("Yes, unfortunately today is a weekday.")
+
+else:
+
+print("It is the weekend, yay!")
+
+
+Explanation:
+
+- To begin we import a module named datetime to work with dates as date objects.
+  
+- We then use functions from the datetime module to define what the day is.
+
+- For today's date, we use the datetime.today() function from datetime module
+
+- The python weekday function of class date returns the day number of the week as an integer (automatically defaults to an integer) . It starts from 0 for a Monday and ends at 6 for a Sunday
+
+- Then using the conditional statement **if** and **else** we can write the decision making process so that the code will be able to decide whether today is a weekday or weekend.
+
+- Then  the code will check if the day is less than 5 (interger value that the weekeday function will use) then its a weekday otherwise it is a weekend.
+
+References:
+
+<https://www.w3schools.com/python/python_datetime.asp>
+
+<https://www.dataquest.io/blog/python-datetime-tutorial/>
+
+<https://docs.python.org/3/library/datetime.html>
+
+<https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python>
+
+<https://www.tutorialsrack.com/articles/324/how-to-find-the-current-day-is-weekday-or-weekends-in-python>
+
+<https://www.xspdf.com/resolution/58438157.html>
+
+
 
 
