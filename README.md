@@ -13,7 +13,7 @@ The output  is their weight divided by their height in metres squared._
 
 _Author  Catherine Leddy_
 
-Code for Task:
+**Code for Task:**
 
 name = input ('Hey what is your name')
 
@@ -29,7 +29,7 @@ BMI= float( weight / Newheight)
 
 print("Your BMI is {}".format (BMI))
 
-Explanation:
+**Explanation:**
 
 
 - First step was to research and look at sample code in the below references.
@@ -58,7 +58,7 @@ _Write a program that takes asks a user to input a string and outputs every seco
 
 _Author Catherine Leddy_
 
-Code for Task:
+**Code for Task:**
 
 sent = str(input("Please enter a sentence and I will output ever second letter for you in reverse order!"))
 
@@ -68,7 +68,7 @@ print (sent2[::2])
 
 print ('Hope you like your new sentence!')
 
-Explanation:
+**Explanation:**
 
 - First task was to  create a string asking the user to input a sentence. This was defined as sent. This input will be variable used for the test code to run on.
 - The sent (user input) was then coded to  read backwards with sent2 = (sent[::-1]). This code uses string slicing to reverse print the input sentence. We use indexing here with [::-1] index position 0 would denote the end of the string sentence. Therefore -1 (negative indexing)is used so the first letter is included in the code. The slice statement [::-1] means start at the end of the string and end at position 0.
@@ -93,23 +93,29 @@ _Write a program that asks the user to input any positive integer and outputs th
 
 _Author Catherine Leddy_
 
-Code for Task:
+**Code for Task:**
 
 number=int(input('Enter a positive integer number:\n'))
 
 def collatz (number):
 
-    while number !=1:
-        if number % 2 == 0:
-            number= number//2
-            print(number)
-        else:
-           number=  3 * number + 1
-           print(number)    
+while number !=1:
+
+if number % 2 == 0:
+
+number= number//2
+
+print(number)
+
+else:
+
+number=  3 * number + 1
+
+print(number)    
 
 collatz(number)
 
-Explanation:
+**Explanation:**
 
 - In the first line of code the number is defined as an int and string is used when asking the user to input a positive integer number.
 - Collatz is then defined as a function. The number is now passed into the function. The code must be indented after the def or we will encounter indentation errors. 
@@ -141,7 +147,7 @@ _Write a program that outputs whether or not today is a weekday_
 
 _Author: Catherine Leddy_
 
-Code for Task:
+**Code for Task:**
 
 import datetime
 
@@ -157,7 +163,7 @@ else:
 print("It is the weekend, yay!")
 
 
-Explanation:
+**Explanation:**
 
 - To begin we import a module named datetime to work with dates as date objects.
   
@@ -184,6 +190,83 @@ References:
 <https://www.tutorialsrack.com/articles/324/how-to-find-the-current-day-is-weekday-or-weekends-in-python>
 
 <https://www.xspdf.com/resolution/58438157.html>
+
+
+# Week 06 Task
+
+_Write a program that takes a positive floating-point number as input and outputs an approximation of its square root_
+
+_Author: Catherine Leddy_
+
+_Newton's Definition for a square root:_
+
+**Let N be any number then the square root of N can be given by the formula:
+root = 0.5 * (X + (N / X)) where X is any guess which can be assumed to be N or 1.**
+
+**Code for Task**
+
+def newton(n): # here we are calling the function newton and passing in the argument (x)
+
+tolerance = 0.000001 #this is the degree of accuracy you want 
+
+estimate = 3.0 # this is the estimated sqrt (the guessed sqrt). This number can be anything you want.
+
+while True:
+
+estimate = (estimate + (n / estimate)) / 2 #newtons equation for a guessed sqrt
+
+difference = abs(n - estimate ** 2)      # newtons equation for a quessed sqrt
+
+if difference <= tolerance: 
+
+ return estimate
+
+def main():
+
+while True:
+ n = input("Enter a positive number that you would like the approximation of it's square root?:")
+
+n = float(n)
+
+n1 =round(newton(n),1)
+
+print ("The program's estimate of the square root of {} is {}".format(n,n1))
+       
+main()
+
+- First we define **def** which is the keyword that will define the function. Newton is the name of the function and x is the argument that we have passed into the function. The colon signifies the beginning of the body of the function.
+- We then defined the accuracy named tolerance which is set at 0.000001. This is a high degree of accuracy.
+- The estimate is the guess of what the square root might be. This can be any number.
+- The estimate and tolerance will now be used in the while loop to build the algorithm for calculating newtons square root
+- **While true** will mean loop forever. The estimate here is X in the newton definition (0.5 * (X + (N / X))). In the formula above /2 is the same as *0.5 int he newton formula.
+- The difference is then calculated as an absolute number. The difference is the calculation that our argument (n) and the estimated number must not have a difference of 0.00001. If the answer is less than or equal to the tolerance the estimate is returned
+- This code also contains a main function which uses the **while true loop** again will call the user to input the number they want to get the newton sq root approximation of. The first line in this function asks the user to enter a positive integer number?
+- The number is defined as float number so we can use numbers with decimals
+- The input number is then entered in the above newton function and the result is rounded to 1 decimal place.
+- The print line then uses the original input number (n) and the result approx square root (n1) 
+- The final line calls the main function that has been defined main() and the program begins.
+
+References:
+
+<https://medium.com/@sddkal/newton-square-root-method-in-python-270853e9185d>
+
+<https://hackernoon.com/calculating-the-square-root-of-a-number-using-the-newton-raphson-method-a-how-to-guide-yr4e32zo>
+
+<https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method>
+
+
+<https://stackoverflow.com/questions/55232484/newtons-method-for-approximating-square-roots>
+
+<https://www.w3schools.com/python/python_functions.asp>
+
+<https://runestone.academy/runestone/books/published/thinkcspy/MoreAboutIteration/NewtonsMethod.html>
+
+<https://benjamin-philip.github.io/sicp/example-square-root-by-newtons-method>
+
+
+
+
+
 
 
 
