@@ -324,3 +324,73 @@ print(NumberE ('filename', 'e'))
 <https://www.openbookproject.net/thinkcs/python/english2e/ch06.html>
 
 
+# Week 08 Task
+
+_Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes._
+
+_Catherine Leddy_
+
+**Code for Task**
+
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+x = np.arange(0.0, 4.0, 0.5) # could also have used np.linespace here 
+
+f = x     
+
+g = x**2   
+
+h = x**3 
+
+plt.plot(f,f, '-m', marker='o', label = 'f(x)=x')  
+
+plt.plot(f,g, '--b', marker= 'x',  label = 'g(x)= x2')
+
+plt.plot(f,h, '-.g', marker= 's', label = 'h(x)=x3')
+
+plt.ylabel('Y-AXIS')
+plt.xlabel('X-AXIS')
+
+plt.title ('Functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] ')
+
+plt.legend()
+
+plt.show()
+
+**Explanation**
+
+- First I imported the two libraries we needed to perform this task which were NumPy and Matlibplot. NumPy (numerical Python)is an open source numerical pyhton library. It is used for working with arrays. Matlibplot is used for visualizing the data on plots.
+- We then defined an array which was named x and np.arange was used to to define the range on the axis that was requested in the task (0,4). This is the range for the x axis. This Y axis range will be defined by the functions that were defined here as f, g and h. 
+- Using the plt.plot function we defined the three functions that we want to be seen on the graph. In these definitions we charaterized the colour, the line marker type for the line and the label for the line.
+- We then named the plot axes as x & y
+- The title for the plot was then defined.
+- the legend is included in this image.
+- Finally we can see what the plot looks like with plt.show()
+- After initially seeing my plot I went back to edit the plot with different labels/colours etc. 
+
+
+![](Week%208%20Task/TaskWeek08Image.png)
+
+
+**References:**
+
+<https://numpy.org/doc/stable/user/absolute_beginners.html>
+
+<https://www.activestate.com/resources/quick-reads/how-to-display-a-plot-in-python/>
+
+<https://sweetcode.io/visualizing-data-python-matplotlib/>
+
+<https://matplotlib.org/stable/tutorials/introductory/pyplot.html>
+
+<https://stackoverflow.com/questions/19125722/adding-a-legend-to-pyplot-in-matplotlib-in-the-simplest-manner-possible>
+
+<https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html>
+
+<https://matplotlib.org/3.1.1/tutorials/intermediate/legend_guide.html>
+
+<https://e2eml.school/matplotlib_points.html>
+
+
+
