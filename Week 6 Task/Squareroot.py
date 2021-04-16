@@ -8,7 +8,7 @@
     # Let N be any number then the square root of N can be given by the formula:
     # root = 0.5 * (X + (N / X)) where X is any guess which can be assumed to be N or 1.
 
-def newton(n): # here we are calling the function newton and passing in the argument (x)
+def sqrt(n): # here we are calling the function newton and passing in the argument (x)
    tolerance = 0.000001 #this is the degree of accuracy you want 
    estimate = 3.0 # this is the estimated sqrt (the guessed sqrt). This number can be anything you want.
    while True:
@@ -23,8 +23,8 @@ def main():
        #if not x:
        #    return ('This is not a positive number')
        n = float(n)
-       n1 =round(newton(n),1)
-       print ("This program's estimate of the square root of {} is {}".format(n,n1))
+       n1 =round(sqrt(n),1)
+       print ("This program's estimate of the square root of {} is approx {}".format(n,n1))
        
 main()
 

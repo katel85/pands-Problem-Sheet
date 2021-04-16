@@ -1,7 +1,3 @@
-pip Install markdown
-pip Install Pygments
-
-
 # Pands-Problem-Sheet-G00048625
 
 
@@ -11,7 +7,7 @@ _Write a program that calculates somebody's Body Mass Index (BMI)
 The inputs are the person's height in centimetres and weight in kilograms.
 The output  is their weight divided by their height in metres squared._
 
-_Author  Catherine Leddy_
+_Catherine Leddy_
 
 **Code for Task:**
 
@@ -56,7 +52,7 @@ References:
 
 _Write a program that takes asks a user to input a string and outputs every second letter in reverse order_
 
-_Author Catherine Leddy_
+_Catherine Leddy_
 
 **Code for Task:**
 
@@ -91,7 +87,7 @@ Automatetheboringstuff.com. 2020. Automate The Boring Stuff With Python. [online
 
 _Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation.At each step calculate the next value by taking the current value and, if it is even,divide it by two, but if it is odd, multiply it by three and add one.Have the program end if the current value is one_
 
-_Author Catherine Leddy_
+_Catherine Leddy_
 
 **Code for Task:**
 
@@ -145,7 +141,7 @@ Python Functions Examples: Call, Indentation, Arguments & Return Values <https:/
 
 _Write a program that outputs whether or not today is a weekday_
 
-_Author: Catherine Leddy_
+_Catherine Leddy_
 
 **Code for Task:**
 
@@ -196,7 +192,7 @@ References:
 
 _Write a program that takes a positive floating-point number as input and outputs an approximation of its square root_
 
-_Author: Catherine Leddy_
+_Catherine Leddy_
 
 _Newton's Definition for a square root:_
 
@@ -205,11 +201,11 @@ root = 0.5 * (X + (N / X)) where X is any guess which can be assumed to be N or 
 
 **Code for Task**
 
-def newton(n): # here we are calling the function newton and passing in the argument (x)
+def sqrt(n): 
 
-tolerance = 0.000001 #this is the degree of accuracy you want 
+tolerance = 0.000001 
 
-estimate = 3.0 # this is the estimated sqrt (the guessed sqrt). This number can be anything you want.
+estimate = 3.0 
 
 while True:
 
@@ -228,13 +224,15 @@ while True:
 
 n = float(n)
 
-n1 =round(newton(n),1)
+n1 =round(sqrt(n),1)
 
 print ("The program's estimate of the square root of {} is {}".format(n,n1))
        
 main()
 
-- First we define **def** which is the keyword that will define the function. Newton is the name of the function and x is the argument that we have passed into the function. The colon signifies the beginning of the body of the function.
+**Explanation:**
+
+- First we define **def** which is the keyword that will define the function. Sqrt (Newton's) is the name of the function and x is the argument that we have passed into the function. The colon signifies the beginning of the body of the function.
 - We then defined the accuracy named tolerance which is set at 0.000001. This is a high degree of accuracy.
 - The estimate is the guess of what the square root might be. This can be any number.
 - The estimate and tolerance will now be used in the while loop to build the algorithm for calculating newtons square root
@@ -242,7 +240,7 @@ main()
 - The difference is then calculated as an absolute number. The difference is the calculation that our argument (n) and the estimated number must not have a difference of 0.00001. If the answer is less than or equal to the tolerance the estimate is returned
 - This code also contains a main function which uses the **while true loop** again will call the user to input the number they want to get the newton sq root approximation of. The first line in this function asks the user to enter a positive integer number?
 - The number is defined as float number so we can use numbers with decimals
-- The input number is then entered in the above newton function and the result is rounded to 1 decimal place.
+- The input number is then entered in the above sqrt (newton's) function and the result is rounded to 1 decimal place.
 - The print line then uses the original input number (n) and the result approx square root (n1) 
 - The final line calls the main function that has been defined main() and the program begins.
 
@@ -264,10 +262,65 @@ References:
 <https://benjamin-philip.github.io/sicp/example-square-root-by-newtons-method>
 
 
+# Week 07 Task
+
+_Write a program that reads in a text file and outputs the number of e's it contains._
+
+_Catherine Leddy_
+
+**Code for Task**
+
+import sys 
+
+print(sys.argv) 
+
+filename=sys.argv[1] 
+
+with open (filename) as f:
+print (f.read())- check that the file will read in correctly
+
+def NumberE(filename, letter):
+
+filename=sys.argv[1] 
+
+with open(filename) as f:
+
+text = f.read()
+
+count = 0     
+
+for char in text:
+        
+if char == letter:
+
+count += 1
+      
+return count    
+  
+print(NumberE ('filename', 'e'))
+
+**Explanation**
+
+- Firstly I imported sys so I could read the file in as an argument. This was changed from the original code that I had on Andrew's feedback. I didn't have the file read in as an argument initially.
+- I printed sys.argv to see what directories exist. The output was es.py. This would be sys.argv[0]. In order for moby dick file to be read in it had to be written on the terminal command once I called the function
+- After reading in the file we defined the function for finding the letters in the txt file and the amount of times they appeared. For this we defined a function called NumberE.  Which has two variables(arguments) filemane and letter. The filename is defined as sys.argv[1] and the file is opened as f and the file is read in under the variable name text. The count variable is initialized to 0. Next the letter count is defined within the function with a **for** loop and the statement reads that if the character == letter the count is added to by one. This function definition is then ended with return count which will output the number of times the specified character has been found in the document.
+- The function is then called and the variables are put into the print statement for the file and letter you want to use.
 
 
+**References:**
 
+<https://www.guru99.com/reading-and-writing-files-in-python.html#6>
 
+<https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/>
 
+<https://stackoverflow.com/questions/48959098/how-to-create-a-new-text-file-using-python/48964410>
+
+<https://www.sanfoundry.com/python-program-read-file-counts-number/>
+
+<https://www.gutenberg.org/files/2701/2701-h/2701-h.htm>
+
+<https://web.microsoftstream.com/video/625784d5-114f-4f8b-a929-8d46a63297ad>
+
+<https://www.openbookproject.net/thinkcs/python/english2e/ch06.html>
 
 
