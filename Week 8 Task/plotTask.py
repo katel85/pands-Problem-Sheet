@@ -5,14 +5,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.arange(0.0, 4.0, 0.5)
-X1 = x      
-X2 = x**2   
-X3 = x**3 
+x = np.arange(0.0, 4.0, 0.5) # three arguments- starting value, ending value and step size between them)
+f = x      
+g = x**2   
+h = x**3 
 
-plt.plot(X1,X1, '-m', marker='o', label = 'f(x)=x')  
-plt.plot(X1,X2, '--b', marker= 'x',  label = 'g(x)= x2')
-plt.plot(X1,X3, '-.g', marker= 's', label = 'h(x)=x3')
+plt.plot(f,f, '-m', marker='o', label = 'f(x)=x')  
+plt.plot(f,g, '--b', marker= 'x',  label = 'g(x)= x2')
+plt.plot(f,h, '-.g', marker= 's', label = 'h(x)=x3')
 plt.ylabel('Y-AXIS')
 plt.xlabel('X-AXIS')
 plt.title ('Functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] ')
